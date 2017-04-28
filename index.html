@@ -1,0 +1,111 @@
+<head>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+
+<body>
+  <main>
+    <header>
+      <article>
+        <h1>Responsive Layouts Without Bootstrap</h1>
+        <p>This is a simple demonstration of organizing different elements without bootstrap so that when a browser is resized the elements adjust accordingly. The goal is obviously to be completely functional with as simple coding as possible. This means avoiding media queries when possible etc. Maybe this is common knowledge for most but as I'm growing and learning, I haven't found a comprehensive tutorial on the web with this stuff. SO..here's my two cents.
+      </article>
+    </header>
+    <section>
+      <article>
+        <h1>Working with Inline Block</h1>
+        <p>Let's say you have a group of objects that are all similar in size and shape. A common scenario would be if you had multiple images or icons that you are setting side by side in a row. In our case, we'll use boxes. The easiest set-up is to set them in a parent container with text-align: center; to center them and then give each element a display:inline or inline-block. FYI, you do have to declare a width in order for this to work. Just keeping it real.</p>
+      </article>
+      <article>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </article>
+      <article>
+        <p>The problem with this format is when you have multiple objects that aren't similar in size or shape. The element that's smaller will float to the bottom which looks funny.
+      </article>
+      <article>
+        <div></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </article>
+      <article>
+        <p>A possible fix is to set the inner elements to vertical-align: top. This works since the container element is set to inline-block. But we all know how elusive and mysterious vertical-align is. So, be careful out there!
+      </article>
+      <article>
+        <div></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </p>
+      </article>
+      <article>
+        <p>The cool thing this is that if you have an object of similar height but different widths, it still works! To keep it from overflowing on monitor sizes that are less than the width of the element put the max-width to 100% and it will cause it to resize at those resolutions.
+        </p>
+      </article>
+      <article>
+        <div></div>
+        <div id="wider"></div>
+      </article>
+      <article>
+        <p>If you want there to be two breaking points where a set of elements stay together a certain amount before breaking, which is common, then simply add two container elements to whatever elements you have in the rows and set that container element to display: inline-block.
+      <article>
+        <asdie>
+          <div></div>
+          <div></div>
+        </aside>
+        <aside>
+          <div></div>
+          <div></div>
+        </asid>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h1>Working with Flexbox</h1>
+        <p>Ahh...imagine the day when all web browsers support flexbox. Oh, what a day that will be. Until then, my motto is if someone cared a ton about the way a website looked they'd probably be willing to upgrade their stinking browser. So, all in all, I think we spend a lot of time trying to impress people that don't even really care how wesbites look. Sorry, done with that rant. On to the example...The next scenario to tackle would be objects with different heights and widths. I've found that the best way to organize these is to use display: flex and the flex-wrap property to wrap. Obviously, there's a little extra work than our last solution. But, it still does a bang up job and solves the problem of encountering vertical allignment issues with objects different in size. A big kicker in all of this is that I've not found a way for flex-boxes to look good on mobile devices. They end up left aligning on me.
+      </article>
+      <article id="flex">
+        <div></div>
+        <div></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h1>Working with lists</h1>
+        <p>Lists work great in any scenario. Not necessarily a semantic dream come true. But, in the right place, it's perfect. And, sometimes you take what you can get. Still, the same problem of the shorter objects floating to the bototm. But, easily fixed with veritcal-align: top.</p>
+      </article>
+      <article id="list">
+        <ul>
+          <li><div></div></li>
+          <li><div></div></li>
+          <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
+        </ul>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h1>Working with Tables</h1>
+        <p>I've tried having similar effects with display: table. It does fairly well in aligning elements of all shapes and sizes in rows. But, instead of adjusting rows upon monitor size change, it makes the elements squeeze proportionately. It may not look pretty here but there's certainly a chance it has its uses.
+      </article>
+      <article id="table">
+        <div></div>
+        <div></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+      <article>
+        <p>The only fix I've found is to set the inner elements to float left. Obviously, after the monitor is resized past a breaking point, instead of the shifting element ending up in the middle, it floats all the way to the left. And, it's not really necessary for the inner elements to be set at display: table-cell. And, you could do this if the container element were set to inline-block and floating the inner elements. So, all in all not a very good solution. Boo...</p>
+      </article>
+      <article id="table2">
+        <div></div>
+        <div></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h1>That's it for me</h1>
+        <p>This was done because I hadn't really seen anything out there that brought all of these pieces together in one tutorial. I'm still relatively new to the game. So, my thinking might be completely or slightly wrong. All in all, this was an excercise and cheat sheet for me as I work on things. I hope it's helpful to you as well. If you'd like to mess around with it, I've made a little stylesheet guide you can take a look at. AND, if you see a simpler way of organizing selectors please let me know!
+      </article>
+     </section>
+  </main>
+</body>

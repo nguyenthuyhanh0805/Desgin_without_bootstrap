@@ -1,0 +1,150 @@
+/* Stylesheet
+
+Simple is the goal
+
+- Only use ids and classes when necessary. Instead utilize pseudo classes :nth-type() :first-child etc.
+- Use ids when it's only necessary for one element to be tagged.
+- Use classes when there's a group of different elements that need classification
+- Organize properties alphabettically
+*/
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Raleway';
+  font-weight: 300;
+  margin: 0;
+}
+
+body{
+  background: -webkit-radial-gradient(white, grey);
+  background: -o-radial-gradient(white, grey);
+  background: -mos-radial-gradient(white, gray);
+  background: radial-gradient(white, grey);
+  background-repeat: no-repeat;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px #000000;
+  margin: 0 auto;
+  min-width: 300px;
+  width: 80%;
+  overflow: scroll;
+}
+
+header {
+  padding: 30px;
+  text-align: center;
+}
+
+header p{
+  padding: 20px 70px;
+  text-align: left;
+}
+
+section{
+  padding: 20px 50px;
+}
+
+section article{
+  text-align: center;
+}
+
+section article p{
+  padding: 20px 0;
+  text-align: left;
+}
+
+section:first-of-type article div{
+  display: inline-block;
+}
+
+article div{
+  background: -webkit-radial-gradient(#fafbfa, #D4DDD6);
+  background: -o-radial-gradient(#fafbfa, #D4DDD6);
+  background: -mos-radial-gradient(#fafbfa, #D4DDD6);
+  background: radial-gradient(#fafbfa, #D4DDD6);
+  border: 6px solid black;  
+  height: 175px;
+  margin: 20px;
+  width: 175px;
+}
+
+section article:nth-child(4) p{
+  display: inline-block;
+  width: 200px;
+}
+
+section article:nth-child(6) div{
+  vertical-align: top;
+}
+
+section article:nth-child(6) p{
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+#wider{
+  max-width: 100%;
+  width: 300px;
+}
+
+aside{
+  display: inline-block;
+}
+
+#flex{
+  display: -webkit-flex; 
+  display: flex; 
+  -webkit-flex-wrap: wrap; 
+  flex-wrap: wrap; 
+  -webkit-justify-content: center; 
+  justify-content: center;
+}
+
+#flex p{
+  width: 280px;
+}
+
+#list li{
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: top;
+}
+
+#list li p{
+  width: 200px;
+}
+
+#table{
+  border-spacing: 50px;
+  display: table;
+}
+
+#table div{
+  display: table-cell;
+}
+
+#table p{
+  display: table-cell;
+}
+
+#table2{
+  display: table;
+  margin: auto;
+}
+
+#table2 div{
+  display: tablle-cell;
+  float: left;
+}
+
+#table2 p{
+  display: table-cell;
+  float: left;
+  width: 200px;
+}
