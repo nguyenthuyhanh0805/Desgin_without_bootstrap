@@ -1,0 +1,95 @@
+
+@font-face {
+	font-family: MyFont1;
+	src: url("./fonts/Montserrat-Regular.ttf")
+}
+
+// different screen
+$break-small: 768px;
+$break-large: 1200px;
+
+// Fonts
+$font-stack:   "MyFont1", sans-serif;
+
+//colors
+    //background-color: for section
+$background-color-section01: #dfe3e8; //head
+    //background-color: for icon
+$background-color-icon01:#333333; // icon hamburger
+
+    //color for text
+    
+$color-text01: #1e3d65; //text in header-primary-nav
+
+    //color when hover
+$color-text-hover01: #1d83bf; //text in header-primary-nav
+
+.head{
+    background-color: $background-color-section01;
+    div{
+        display:inline-block
+    }
+    .logo{
+        width: 140px;
+        height: 50px;
+        background-image: url(./image/logo-big.png);
+        background-position: center;
+        background-size: cover;
+        margin: 20px 0px 0px 40px;
+    }
+    .menu{
+        float:right;
+        margin:30px 10px 0px 0px;
+        button{
+            display:none;
+            background-color: $background-color-section01;
+            border: none;
+            
+        }
+        .line-hambuger{
+            width:30px;
+            height: 4px;
+            margin: 3px;
+            border-radius:5px;
+            background-color: $background-color-icon01
+        }
+        @media screen and (max-width: $break-small) {
+            button{
+                display:block;
+                &:focus{
+                    outline: none;
+                }
+            }
+            .line-hambuger{
+                display:block
+            }
+        }
+    }
+    .header-primary-nav{
+        float:right;
+        margin:30px;
+        li{
+            list-style-type:none;
+            display: inline;
+            margin: 0px 30px 0px 0px
+        }
+        a{
+            color: $color-text01;
+            font-family: $font-stack;
+            font-size: 18px;
+            &:hover{
+                color:$color-text-hover01;
+                text-decoration: none;
+                cursor: pointer
+            }
+        }
+        @media screen and (max-width: $break-small) {
+            display:none;
+            &.active{
+                display: block;
+                background-color:white;
+                max-height: 60px;
+            }
+        }
+    }
+}

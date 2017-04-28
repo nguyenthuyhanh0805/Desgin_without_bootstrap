@@ -1,0 +1,57 @@
+@font-face {
+  font-family: MyFont1;
+  src: url("./fonts/Montserrat-Regular.ttf"); }
+
+.head {
+  background-color: #dfe3e8; }
+  .head div {
+    display: inline-block; }
+  .head .logo {
+    width: 140px;
+    height: 50px;
+    background-image: url(./image/logo-big.png);
+    background-position: center;
+    background-size: cover;
+    margin: 20px 0px 0px 40px; }
+  .head .menu {
+    float: right;
+    margin: 30px 10px 0px 0px; }
+    .head .menu button {
+      display: none;
+      background-color: #dfe3e8;
+      border: none; }
+    .head .menu .line-hambuger {
+      width: 30px;
+      height: 4px;
+      margin: 3px;
+      border-radius: 5px;
+      background-color: #333333; }
+    @media screen and (max-width: 768px) {
+      .head .menu button {
+        display: block; }
+        .head .menu button:focus {
+          outline: none; }
+      .head .menu .line-hambuger {
+        display: block; } }
+  .head .header-primary-nav {
+    float: right;
+    margin: 30px; }
+    .head .header-primary-nav li {
+      list-style-type: none;
+      display: inline;
+      margin: 0px 30px 0px 0px; }
+    .head .header-primary-nav a {
+      color: #1e3d65;
+      font-family: "MyFont1", sans-serif;
+      font-size: 18px; }
+      .head .header-primary-nav a:hover {
+        color: #1d83bf;
+        text-decoration: none;
+        cursor: pointer; }
+    @media screen and (max-width: 768px) {
+      .head .header-primary-nav {
+        display: none; }
+        .head .header-primary-nav.active {
+          display: block;
+          background-color: white;
+          max-height: 60px; } }
