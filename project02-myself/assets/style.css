@@ -2,11 +2,40 @@
   font-family: MyFont1;
   src: url("./fonts/Montserrat-Regular.ttf"); }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(200%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(0); } }
+
 .head {
   background-color: #dfe3e8;
   position: fixed;
   z-index: 100;
-  width: 100%; }
+  width: 100%;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-name: appear; }
   .head div {
     display: inline-block; }
   .head .logo {
@@ -66,50 +95,74 @@
           width: 100%;
           margin: 5px 5px 0px 5px; } }
 
-.websites .title {
-  text-align: center;
-  font-family: "MyFont1", sans-serif; }
-
-.websites .websites-boxes {
-  margin: 10px 20px 10px 30px; }
-  .websites .websites-boxes div {
-    display: inline-block; }
-  .websites .websites-boxes .websites-box {
-    max-width: 400px;
-    min-height: 250px;
-    margin: 20px 10px 20px 10px; }
-    .websites .websites-boxes .websites-box .header-box {
-      height: 20px;
-      width: 100%;
-      background-color: #1e3d65; }
-      .websites .websites-boxes .websites-box .header-box .window-icon {
-        height: 3px;
-        width: 3px;
-        background-color: #183151; }
-    .websites .websites-boxes .websites-box .body-box img {
-      width: 100%; }
+.websites {
+  animation-duration: 1s;
+  /* the duration of the animation */
+  animation-timing-function: ease-out;
+  /* how the animation will behave */
+  animation-delay: 0.1s;
+  /* how long to delay the animation from starting */
+  animation-iteration-count: 1;
+  /* how many times the animation will play */
+  animation-name: slideInFromRight;
+  /* the name of the animation we defined above */ }
+  .websites .title {
+    text-align: center;
+    font-family: "MyFont1", sans-serif; }
+  .websites .websites-boxes {
+    margin: 10px 20px 10px 30px; }
+    .websites .websites-boxes div {
+      display: inline-block; }
+    .websites .websites-boxes .websites-box {
+      max-width: 400px;
+      min-height: 250px;
+      margin: 20px 10px 20px 10px; }
+      .websites .websites-boxes .websites-box .header-box {
+        height: 20px;
+        width: 100%;
+        background-color: #1e3d65; }
+        .websites .websites-boxes .websites-box .header-box .window-icon-block {
+          float: right;
+          margin-right: 10px; }
+          .websites .websites-boxes .websites-box .header-box .window-icon-block .window-icon {
+            height: 10px;
+            width: 10px;
+            background-color: #162335;
+            display: inline-block; }
+      .websites .websites-boxes .websites-box .body-box img {
+        width: 100%; }
+      @media screen and (max-width: 768px) {
+        .websites .websites-boxes .websites-box {
+          max-width: 500px;
+          margin: 5px 10px 5px 10px; } }
+      @media screen and (min-width: 768px) and (max-width: 980px) {
+        .websites .websites-boxes .websites-box {
+          max-width: 300px; } }
+      @media screen and (min-width: 980px) and (max-width: 1330px) {
+        .websites .websites-boxes .websites-box {
+          max-width: 400px; } }
     @media screen and (max-width: 768px) {
-      .websites .websites-boxes .websites-box {
-        max-width: 500px;
-        margin: 5px 10px 5px 10px; } }
-    @media screen and (min-width: 768px) and (max-width: 980px) {
-      .websites .websites-boxes .websites-box {
-        max-width: 300px; } }
-    @media screen and (min-width: 980px) and (max-width: 1330px) {
-      .websites .websites-boxes .websites-box {
-        max-width: 400px; } }
-  @media screen and (max-width: 768px) {
-    .websites .websites-boxes {
-      margin-left: 70px; } }
-  @media screen and (min-width: 768px) and (max-width: 1330px) {
-    .websites .websites-boxes {
-      margin-left: 100px; } }
+      .websites .websites-boxes {
+        margin-left: 70px; } }
+    @media screen and (min-width: 768px) and (max-width: 1330px) {
+      .websites .websites-boxes {
+        margin-left: 100px; } }
 
 .about-us {
   font-family: "MyFont1", sans-serif;
   text-align: center;
   color: white;
-  background-image: url("./img/background-about.png"); }
+  background-image: url("./img/background-about.png");
+  animation-duration: 1s;
+  /* the duration of the animation */
+  animation-timing-function: ease-out;
+  /* how the animation will behave */
+  animation-delay: 0.3s;
+  /* how long to delay the animation from starting */
+  animation-iteration-count: 1;
+  /* how many times the animation will play */
+  animation-name: slideInFromLeft;
+  /* the name of the animation we defined above */ }
   .about-us h1 {
     padding-top: 20px; }
   .about-us p {

@@ -12,7 +12,8 @@ $(document).ready(function(){
 $(document).ready(function(){
     $(window).scroll(function(){
         var windowTop = $(window).scrollTop();
-        debugger
+        var beforeAboutUsTop = $('.website-slider').height() + $('.websites').height() -500;
+       
         if(windowTop > 0){
             $('.header-primary-nav').addClass('active');
             $('.logo').addClass('active');

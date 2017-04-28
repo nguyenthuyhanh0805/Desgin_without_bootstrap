@@ -16,7 +16,7 @@ $font-stack01:   "MyFont1", sans-serif;
     //background-color: for section
 $background-color-section01: #dfe3e8; //head
 $background-color-section02: #1e3d65; //header-box
-$background-color-section03: #183151; //window-icon
+$background-color-section03: #162335; //window-icon
 
     //background-color: for icon
 $background-color-icon01:#333333; // icon hamburger
@@ -28,6 +28,39 @@ $color-text02: white; //text in about-us
 
     //color when hover
 $color-text-hover01: #1d83bf; //text in header-primary-nav
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes appear{
+    0%{
+        opacity: 0
+    }
+    100%{
+        opacity: 1 
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes bottomToTop {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 .head{
     background-color: $background-color-section01;
@@ -109,6 +142,11 @@ $color-text-hover01: #1d83bf; //text in header-primary-nav
             }
         }
     }
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-name: appear;
 }
 
 .websites{
@@ -116,6 +154,7 @@ $color-text-hover01: #1d83bf; //text in header-primary-nav
         text-align: center;
         font-family: $font-stack01
     }
+    
     .websites-boxes{
         margin: 10px 20px 10px 30px;
         div{
@@ -129,11 +168,18 @@ $color-text-hover01: #1d83bf; //text in header-primary-nav
                 height: 20px;
                 width: 100%;
                 background-color:$background-color-section02;
-                .window-icon{
-                    height: 3px;
-                    width: 3px;
-                    background-color:$background-color-section03;
+                .window-icon-block{
+                    float: right;
+                    margin-right:10px;
+                    .window-icon{
+                        height: 10px;
+                        width: 10px;
+                        background-color:$background-color-section03;
+                        display: inline-block;
+                    
+                    }
                 }
+                
             }
             .body-box{
                 img{
@@ -158,6 +204,11 @@ $color-text-hover01: #1d83bf; //text in header-primary-nav
             margin-left:100px
         }
     }
+    animation-duration: 1s; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */
+    animation-delay: 0.1s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: slideInFromRight; /* the name of the animation we defined above */
 }
 
 .about-us{
@@ -165,6 +216,11 @@ $color-text-hover01: #1d83bf; //text in header-primary-nav
     text-align: center;
     color: $color-text02;
     background-image: url('./img/background-about.png');
+    animation-duration: 1s; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */
+    animation-delay: 0.3s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: slideInFromLeft; /* the name of the animation we defined above */
     h1{
         padding-top:20px;
     }
