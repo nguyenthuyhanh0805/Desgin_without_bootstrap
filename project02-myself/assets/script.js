@@ -22,6 +22,9 @@ $(document).ready(function(){
         }
     });
 });
+smoothScroll.init({
+    offset: 40
+});
 jssor_slider1_starter = function (containerId) {
     var options = {
         $AutoPlay: 1,                                       //[Optional] Auto play or not, to enable slideshow, this option must be set to greater than 0. Default value is 0. 0: no auto play, 1: continuously, 2: stop at last slide, 4: stop on click, 8: stop on user navigation (by arrow/bullet/thumbnail/drag/arrow key navigation)

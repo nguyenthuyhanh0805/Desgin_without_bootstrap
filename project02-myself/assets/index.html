@@ -7,6 +7,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="./libraries/js/jssor.slider.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.3.1/js/smooth-scroll.js"></script>
         <link rel="stylesheet" href="./style.css"/>
     </head>
     <body>
@@ -20,10 +21,10 @@
                 </button>
             </div>
             <ul class="header-primary-nav">
-                <li><a>Website</a></li>
+                <li><a data-scroll href="#website">Website</a></li>
                 <li><a>Discover</a></li>
                 <li><a>Contact us</a></li>
-                <li><a>About us</a></li>
+                <li><a data-scroll href="#about">About us</a></li>
             </ul>
         </div>
         <div class="body">
@@ -328,7 +329,7 @@
                     <!-- Jssor Slider End -->
                 </div>
             </div>
-            <div class="websites">
+            <div  id="website" class="websites">
                 <div class="title">
                     <h1>BUSINESS WEBSITES</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut aliquam ligula.</p>
@@ -456,10 +457,11 @@
                     </div>
                 </div>
             </div>
-            <div class="booking-request"></div>
-            <div class="website-features"></div>
-            <div class="subscribe"></div>
-            <div class="featured-on"></div>
+            <div class="about-us" id="about">
+                <h1> ABOUT US </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut aliquam ligula.</p>
+            </div>
+            
         </div>
         <div class="footer">
 

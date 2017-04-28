@@ -63,7 +63,8 @@
           display: block;
           background-color: white;
           max-height: 60px;
-          width: 100%; } }
+          width: 100%;
+          margin: 5px 5px 0px 5px; } }
 
 .websites .title {
   text-align: center;
@@ -103,3 +104,13 @@
   @media screen and (min-width: 768px) and (max-width: 1330px) {
     .websites .websites-boxes {
       margin-left: 100px; } }
+
+.about-us {
+  font-family: "MyFont1", sans-serif;
+  text-align: center;
+  color: white;
+  background-image: url("./img/background-about.png"); }
+  .about-us h1 {
+    padding-top: 20px; }
+  .about-us p {
+    padding-bottom: 40px; }
